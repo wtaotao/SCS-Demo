@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan("com")
-@MapperScan("com.anji.allways.mapper")
+@MapperScan("com.nikki.mapper")
 public class DemoApplication {
 
 	public static void main(String[] args) {

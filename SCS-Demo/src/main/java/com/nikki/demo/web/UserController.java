@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.anji.allways.common.dto.ResponseData;
-import com.anji.allways.dto.sys.res.UserResDto;
-import com.anji.allways.entity.UserEntity;
-import com.anji.allways.service.sys.IUserService;
+import com.nikki.common.dto.ResponseData;
+import com.nikki.dto.sys.res.UserResDto;
+import com.nikki.entity.UserEntity;
+import com.nikki.service.sys.IUserService;
 
 import io.swagger.annotations.ApiParam;
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.anji.allways.mapper.UserMapper">
-  <resultMap id="BaseResultMap" type="com.anji.allways.entity.UserEntity">
+<mapper namespace="com.nikki.mapper.UserMapper">
+  <resultMap id="BaseResultMap" type="com.nikki.entity.UserEntity">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="name" jdbcType="CHAR" property="name" />
     <result column="age" jdbcType="INTEGER" property="age" />

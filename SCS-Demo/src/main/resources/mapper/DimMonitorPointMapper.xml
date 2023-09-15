@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.anji.allways.mapper.DimMonitorPointMapper">
-  <resultMap id="BaseResultMap" type="com.anji.allways.entity.DimMonitorPointEntity">
+<mapper namespace="com.nikki.mapper.DimMonitorPointMapper">
+  <resultMap id="BaseResultMap" type="com.nikki.entity.DimMonitorPointEntity">
     <id column="monitor_point_id" jdbcType="INTEGER" property="monitorPointId" />
     <result column="monitor_point_name" jdbcType="CHAR" property="monitorPointName" />
     <result column="monitor_point_amt" jdbcType="DECIMAL" property="monitorPointAmt" />
@@ -71,7 +71,7 @@
     monitor_point_id, monitor_point_name, monitor_point_amt, monitor_point_risk_grade, 
     update_time, flag
   </sql>
-  <select id="selectByExample" parameterType="com.anji.allways.entity.DimMonitorPointEntityExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.nikki.entity.DimMonitorPointEntityExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -95,13 +95,13 @@
     delete from dim_monitor_point
     where monitor_point_id = #{monitorPointId,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.anji.allways.entity.DimMonitorPointEntityExample">
+  <delete id="deleteByExample" parameterType="com.nikki.entity.DimMonitorPointEntityExample">
     delete from dim_monitor_point
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.anji.allways.entity.DimMonitorPointEntity">
+  <insert id="insert" parameterType="com.nikki.entity.DimMonitorPointEntity">
     insert into dim_monitor_point (monitor_point_id, monitor_point_name, monitor_point_amt, 
       monitor_point_risk_grade, update_time, flag
       )
@@ -109,7 +109,7 @@
       #{monitorPointRiskGrade,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP}, #{flag,jdbcType=CHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.anji.allways.entity.DimMonitorPointEntity">
+  <insert id="insertSelective" parameterType="com.nikki.entity.DimMonitorPointEntity">
     insert into dim_monitor_point
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="monitorPointId != null">
@@ -152,7 +152,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.anji.allways.entity.DimMonitorPointEntityExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.nikki.entity.DimMonitorPointEntityExample" resultType="java.lang.Long">
     select count(*) from dim_monitor_point
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -196,7 +196,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.anji.allways.entity.DimMonitorPointEntity">
+  <update id="updateByPrimaryKeySelective" parameterType="com.nikki.entity.DimMonitorPointEntity">
     update dim_monitor_point
     <set>
       <if test="monitorPointName != null">
@@ -217,7 +217,7 @@
     </set>
     where monitor_point_id = #{monitorPointId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.anji.allways.entity.DimMonitorPointEntity">
+  <update id="updateByPrimaryKey" parameterType="com.nikki.entity.DimMonitorPointEntity">
     update dim_monitor_point
     set monitor_point_name = #{monitorPointName,jdbcType=CHAR},
       monitor_point_amt = #{monitorPointAmt,jdbcType=DECIMAL},

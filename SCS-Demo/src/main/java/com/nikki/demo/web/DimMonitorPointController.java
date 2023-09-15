@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.alibaba.fastjson.JSONObject;
-import com.anji.allways.common.dto.ResponseData;
-import com.anji.allways.dto.sys.res.DimMonitorPointResDto;
-import com.anji.allways.entity.DimMonitorPointEntity;
-import com.anji.allways.service.sys.impl.DimMonitorPointServiceImpl;
+import com.nikki.common.dto.ResponseData;
+import com.nikki.dto.sys.res.DimMonitorPointResDto;
+import com.nikki.entity.DimMonitorPointEntity;
+import com.nikki.service.sys.impl.DimMonitorPointServiceImpl;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
