@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.anji.allways.mapper.DimMonitorPointMapper">
+  <resultMap id="BaseResultMap" type="com.anji.allways.entity.DimMonitorPointEntity">
+    <id column="monitor_point_id" jdbcType="INTEGER" property="monitorPointId" />
+    <result column="monitor_point_name" jdbcType="CHAR" property="monitorPointName" />
+    <result column="monitor_point_amt" jdbcType="DECIMAL" property="monitorPointAmt" />
+    <result column="monitor_point_risk_grade" jdbcType="VARCHAR" property="monitorPointRiskGrade" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="flag" jdbcType="CHAR" property="flag" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    monitor_point_id, monitor_point_name, monitor_point_amt, monitor_point_risk_grade, 
+    update_time, flag
+  </sql>
+  <select id="selectByExample" parameterType="com.anji.allways.entity.DimMonitorPointEntityExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from dim_monitor_point
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from dim_monitor_point
+    where monitor_point_id = #{monitorPointId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from dim_monitor_point
+    where monitor_point_id = #{monitorPointId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.anji.allways.entity.DimMonitorPointEntityExample">
+    delete from dim_monitor_point
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.anji.allways.entity.DimMonitorPointEntity">
+    insert into dim_monitor_point (monitor_point_id, monitor_point_name, monitor_point_amt, 
+      monitor_point_risk_grade, update_time, flag
+      )
+    values (#{monitorPointId,jdbcType=INTEGER}, #{monitorPointName,jdbcType=CHAR}, #{monitorPointAmt,jdbcType=DECIMAL}, 
+      #{monitorPointRiskGrade,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP}, #{flag,jdbcType=CHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.anji.allways.entity.DimMonitorPointEntity">
+    insert into dim_monitor_point
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="monitorPointId != null">
+        monitor_point_id,
+      </if>
+      <if test="monitorPointName != null">
+        monitor_point_name,
+      </if>
+      <if test="monitorPointAmt != null">
+        monitor_point_amt,
+      </if>
+      <if test="monitorPointRiskGrade != null">
+        monitor_point_risk_grade,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="flag != null">
+        flag,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="monitorPointId != null">
+        #{monitorPointId,jdbcType=INTEGER},
+      </if>
+      <if test="monitorPointName != null">
+        #{monitorPointName,jdbcType=CHAR},
+      </if>
+      <if test="monitorPointAmt != null">
+        #{monitorPointAmt,jdbcType=DECIMAL},
+      </if>
+      <if test="monitorPointRiskGrade != null">
+        #{monitorPointRiskGrade,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flag != null">
+        #{flag,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.anji.allways.entity.DimMonitorPointEntityExample" resultType="java.lang.Long">
+    select count(*) from dim_monitor_point
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update dim_monitor_point
+    <set>
+      <if test="record.monitorPointId != null">
+        monitor_point_id = #{record.monitorPointId,jdbcType=INTEGER},
+      </if>
+      <if test="record.monitorPointName != null">
+        monitor_point_name = #{record.monitorPointName,jdbcType=CHAR},
+      </if>
+      <if test="record.monitorPointAmt != null">
+        monitor_point_amt = #{record.monitorPointAmt,jdbcType=DECIMAL},
+      </if>
+      <if test="record.monitorPointRiskGrade != null">
+        monitor_point_risk_grade = #{record.monitorPointRiskGrade,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updateTime != null">
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.flag != null">
+        flag = #{record.flag,jdbcType=CHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update dim_monitor_point
+    set monitor_point_id = #{record.monitorPointId,jdbcType=INTEGER},
+      monitor_point_name = #{record.monitorPointName,jdbcType=CHAR},
+      monitor_point_amt = #{record.monitorPointAmt,jdbcType=DECIMAL},
+      monitor_point_risk_grade = #{record.monitorPointRiskGrade,jdbcType=VARCHAR},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      flag = #{record.flag,jdbcType=CHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.anji.allways.entity.DimMonitorPointEntity">
+    update dim_monitor_point
+    <set>
+      <if test="monitorPointName != null">
+        monitor_point_name = #{monitorPointName,jdbcType=CHAR},
+      </if>
+      <if test="monitorPointAmt != null">
+        monitor_point_amt = #{monitorPointAmt,jdbcType=DECIMAL},
+      </if>
+      <if test="monitorPointRiskGrade != null">
+        monitor_point_risk_grade = #{monitorPointRiskGrade,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flag != null">
+        flag = #{flag,jdbcType=CHAR},
+      </if>
+    </set>
+    where monitor_point_id = #{monitorPointId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.anji.allways.entity.DimMonitorPointEntity">
+    update dim_monitor_point
+    set monitor_point_name = #{monitorPointName,jdbcType=CHAR},
+      monitor_point_amt = #{monitorPointAmt,jdbcType=DECIMAL},
+      monitor_point_risk_grade = #{monitorPointRiskGrade,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      flag = #{flag,jdbcType=CHAR}
+    where monitor_point_id = #{monitorPointId,jdbcType=INTEGER}
+  </update>
+</mapper>
