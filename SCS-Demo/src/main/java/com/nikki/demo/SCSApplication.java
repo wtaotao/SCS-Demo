@@ -8,9 +8,9 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @ComponentScan("com")
 @MapperScan("com.nikki.mapper")
-public class DemoApplication {
+public class SCSApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(SCSApplication.class, args);
 	}
 }
