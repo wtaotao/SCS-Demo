@@ -2,7 +2,7 @@
  * CustomExceptionAdvice.java
  * Created at 2020-03-28
  * Created by xieyb
- * Copyright (C) 2020 ANJI LOGISTICS, All rights reserved.
+ * Copyright (C) 2020 nikki, All rights reserved.
  **/
 package com.nikki.common.aspect;
 

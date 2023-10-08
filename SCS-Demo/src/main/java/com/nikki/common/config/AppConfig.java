@@ -2,7 +2,7 @@
  * AppConfig.java
  * Created at 2021-09-10
  * Created by xieyingbin
- * Copyright (C) 2020 ANJI LOGISTICS, All rights reserved.
+ * Copyright (C) 2020 nikki, All rights reserved.
  */
 package com.nikki.common.config;
 
