@@ -2,7 +2,7 @@
  * DimMonitorPointReqDto.java
  * Created at 2022-11-16
  * Created by wangyanjun
- * Copyright (C) 2020 ANJI LOGISTICS, All rights reserved.
+ * Copyright (C) 2020 nikki, All rights reserved.
  **/
 package com.nikki.dto.sys.req;
 

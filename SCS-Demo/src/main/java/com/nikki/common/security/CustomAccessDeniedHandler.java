@@ -2,7 +2,7 @@
  * CustomAccessDeniedHandler.java
  * Created at 2020-03-20
  * Created by xieyingbin
- * Copyright (C) 2020 ANJI LOGISTICS, All rights reserved.
+ * Copyright (C) 2020 nikki, All rights reserved.
  */
 package com.nikki.common.security;
 

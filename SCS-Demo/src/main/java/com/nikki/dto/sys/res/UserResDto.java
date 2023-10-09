@@ -1,5 +1,5 @@
 /**
- * anji-allways.com Inc.
+ * nikki.com Inc.
  * Copyright (c) 2022-2023 All Rights Reserved.
  */
 package com.nikki.dto.sys.res;

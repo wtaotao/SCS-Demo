@@ -1,5 +1,5 @@
 /**
- * anji-allways.com Inc.
+ * nikki.com Inc.
  * Copyright (c) 2016-2017 All Rights Reserved.
  */
 package com.nikki.demo.web;
