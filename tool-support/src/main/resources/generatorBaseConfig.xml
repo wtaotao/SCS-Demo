@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<!-- 添加外部运行类jar包，如jdbc一类的，非必须选项，可不选，可以是文件，也可以是目录 -->
+	<!-- <classPathEntry	location="/Program Files/IBM/SQLLIB/java/db2java.zip" /> -->
+	<properties resource="generatorConfig.properties" />
+	<context id="mycontext" targetRuntime="MyBatis3" defaultModelType="conditional">
+		
+		<!-- (一) MBG提供的内置插件 -->
+		<!-- 为生成的Java模型创建一个toString方法 -->
+		<plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
+
+		<!-- 为生成的Java模型类添加序列化接口 -->
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+
+		<!-- 处理is_开头表字段 -->
+<!-- 		<plugin type="mybatis.plugin.BooleanColumnPlugin" /> -->
+
+		<!-- 用来实现简单分页 -->
+<!-- 		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" /> -->
+
+		<!-- (二) 自定义插件 -->
+		<!-- 项目生成自定义 -->
+		<plugin type="mybatis.plugin.BaseCustomizePlugin">
+			<property name="daoTargetDir" value="${daoTargetDir}" />
+			<property name="daoTargetPackage" value="${daoTargetPackage}" />
+			<property name="daoSuperClass" value="${daoSuperClass}" />
+		</plugin>
+
+		<!-- 注释生成器,type是自定义的生成器,不指定默认,一般继承org.mybatis.generator.api.CommentGenerator -->
+		<commentGenerator  type="mybatis.plugin.SelfCommentGenerator">
+			<property name="dateFormat" value="yyyy-MM-dd"/>
+		</commentGenerator>
+
+		<!-- 使用jdbcconnect连接数据库或者使用connectionFactory连接数据库 -->
+		<connectionFactory>
+			<property name="driverClass" value="${jdbc.driverClassName}" />
+			<property name="connectionURL" value="${jdbc.url}" />
+			<property name="userId" value="${jdbc.username}" />
+			<property name="password" value="${jdbc.password}"/>
+			<!-- 针对mysql数据库，设置为true可以获取到表注释 -->
+			<property name="useInformationSchema" value="true" />
+			<!-- 针对oracle数据库，设置为true可以获取到表注释 -->
+			<property name="remarksReporting" value="true"/> 
+			<property name="nullCatalogMeansCurrent" value="true"/>
+		</connectionFactory>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<!-- Model 代码生成路径 -->
+		<javaModelGenerator targetPackage="${modelTargetPackage}" targetProject="${modelTargetDir}">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<!-- Mapper SQL 代码生成路径 -->
+		<sqlMapGenerator targetPackage="${xmlTargetPackage}" targetProject="${xmlTargetDir}">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+<!-- 		<table tableName="tc_biz_dictionary" /> -->
+<!-- 		<table tableName="tl_login_log" /> -->
+<!-- 		<table tableName="tr_role_menu" /> -->
+<!-- 		<table tableName="tr_role_permission" /> -->
+<!-- 		<table tableName="tr_user_role" /> -->
+<!-- 		<table tableName="ts_menu" /> -->
+<!-- 		<table tableName="ts_permission" /> -->
+<!-- 		<table tableName="ts_oauth_app" /> -->
+<!-- 		<table tableName="ts_oauth_token" /> -->
+<!-- 		<table tableName="ts_role" /> -->
+<!-- 		<table tableName="ts_user" /> -->
+<!-- 		<table tableName="ts_config" /> -->
+		<table tableName="tl_password" />
+		<table tableName="dim_monitor_point" />
+
+	</context>
+</generatorConfiguration>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="${log.debug:-false}" scan="${log.scan:-false}" scanPeriod="${log.scanPeriod:-60 seconds}">
+	<!-- logback-test.xml文件一般用于测试环境（打包构建不加入包中），logback.xml用于生产 -->
+	<!-- debug属性，开通logback调试模式，输出配置文件检查信息，相当于程序中添加 LoggerContext lc =(LoggerContext)LoggerFactory.getILoggerFactory();StatusPrinter.print(lc); 
+	scan：是否自动扫描配置文件变更，默认不扫描，设置为true，如果不设置scanPeriod属性，则默认每分钟扫描一下，会多少影响性能，不建议设置 ,设置之后每隔16次记录操作进行一次检查
+	scanPeriod：扫描配置文件时间间隔，单位：milliseconds, seconds, minutes or hours，不指定默认milliseconds -->
+	<!-- 指定日志资源文件 -->
+	<property resource="logback.properties"/>
+	<!-- 设置上下文名称，用于不同项目的区分，默认default -->
+	<contextName>${log.contextName:-default}</contextName>
+	
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>${log.consoleEncoder}</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${log.file}</file>
+		<!-- 默认true，是否默认添加到文件。若为true，添加到以存在的文件尾端，若为false，则覆盖已经存在的文件 -->
+		<append>${log.append:-true}</append>
+		
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log.archivesFile}</fileNamePattern>
+			<maxHistory>${log.maxHistory:-0}</maxHistory>
+			<totalSizeCap>${log.totalSizeCap:-0}</totalSizeCap>
+		</rollingPolicy>
+		
+		<encoder>
+			<pattern>${log.fileEncoder}</pattern>
+			<!-- 是否立刻写到日志中，否的话可以提高吞吐量，默认true -->
+			<immediateFlush>${log.immediateFlush:-true}</immediateFlush>
+			<!-- 默认为true，若为true，则在打印日志前输出日志样式信息 -->
+			<outputPatternAsHeader>${log.outputPatternAsHeader:-false}</outputPatternAsHeader>
+		</encoder>
+	</appender>
+	
+	<logger name="com.study.springmv" level="INFO" />
+	<logger name="org.springframework.core" level="INFO" />
+	<logger name="org.springframework.beans"  level="INFO" />
+	<logger name="org.springframework.context"  level="INFO" />>
+	<logger name="org.springframework.web" level="INFO" />
+	<logger name="org.apache.catalina.startup.DigesterFactory" level="ERROR"/>
+	<logger name="org.apache.catalina.util.LifecycleBase" level="ERROR"/>
+	<logger name="org.apache.coyote.http11.Http11NioProtocol" level="WARN"/>
+	<logger name="org.apache.sshd.common.util.SecurityUtils" level="WARN"/>
+	<logger name="org.apache.tomcat.util.net.NioSelectorPool" level="WARN"/>
+	<logger name="org.eclipse.jetty.util.component.AbstractLifeCycle" level="ERROR"/>
+	<logger name="org.hibernate.validator.internal.util.Version" level="WARN"/>
+	
+	<!-- turn OFF all logging (children can override) -->
+	<root level="INFO">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="FILE" />
+	</root>
+</configuration>
