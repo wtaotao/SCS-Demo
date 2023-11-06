@@ -90,11 +90,14 @@
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 
-<!-- 		<table tableName="tt_test1" /> -->
-<!-- 		<table tableName="ts_column" />
-		<table tableName="tr_user_column" /> -->
-		<table tableName="dim_monitor_point" />
-		<table tableName="scs_user" />
+		<table tableName="tb_user" />
+		<table tableName="tb_organization" />
+		<table tableName="tb_role" />
+		<table tableName="tb_auth" />
+		<table tableName="tb_role_auth" />
+		<table tableName="tb_organization_role" />
+		<table tableName="tb_user_role" />
+		<table tableName="tb_user_organization" />
 
 	</context>
 </generatorConfiguration>

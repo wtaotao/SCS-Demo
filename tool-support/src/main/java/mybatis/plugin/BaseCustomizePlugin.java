@@ -69,6 +69,9 @@ public class BaseCustomizePlugin extends PluginAdapter {
         
         // 自定义JavaMapper文件名
         String shortName = baseRecordType.substring(baseRecordType.lastIndexOf(".") + 1);
+        if (shortName.startsWith("Tb")) {
+            shortName = shortName.substring(2);
+        }
         String daoName = shortName + "Mapper";
         javaMapperFileName = daoTargetPackage + "." + daoName;
         log.info("Java Mapper FileName = " + javaMapperFileName);
@@ -79,11 +82,12 @@ public class BaseCustomizePlugin extends PluginAdapter {
 
     	// 自定义Example文件名
     	String exampleType = introspectedTable.getExampleType();
-    	exampleType = exampleType.replace("Example", "EntityExample");
+    	exampleType = exampleType.replace("entity.Tb", "entity.").replace("Example", "EntityExample");
     	introspectedTable.setExampleType(exampleType);
     	log.info("Java Example FileName= " + exampleType);
 
     	// 自定义Entity文件名
+    	baseRecordType = baseRecordType.replace("entity.Tb", "entity.");
         introspectedTable.setBaseRecordType(baseRecordType + "Entity");
         log.info("Java Entity FileName = " + introspectedTable.getBaseRecordType());
 

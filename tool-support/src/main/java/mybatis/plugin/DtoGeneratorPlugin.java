@@ -116,7 +116,11 @@ public class DtoGeneratorPlugin extends PluginAdapter {
 			GeneratedJavaFile javafile = new GeneratedJavaFile(reqDtoCu, dtoTargetDir, context.getJavaFormatter());
 			//判断文件是否存在
 			File dir = shellCallback.getDirectory(dtoTargetDir, reqDtoTargetPackage);
-			File file = new File(dir, javafile.getFileName());
+			String fileName = javafile.getFileName();
+			if (fileName.startsWith("Tb")) {
+			    fileName = fileName.substring(2);
+			}
+			File file = new File(dir, fileName);
 			// 文件不存在
 			if (!file.exists()) {
 				dtoJavaFiles.add(javafile);
@@ -161,8 +165,12 @@ public class DtoGeneratorPlugin extends PluginAdapter {
 	private CompilationUnit generateReqDto(IntrospectedTable introspectedTable) {
 		// 设置reqDto类信息
 		FullyQualifiedTable table = introspectedTable.getFullyQualifiedTable();
+        String fileName = table.getDomainObjectName();
+        if (fileName.startsWith("Tb")) {
+            fileName = fileName.substring(2);
+        }
 		FullyQualifiedJavaType type = new FullyQualifiedJavaType(
-				this.reqDtoTargetPackage + "." + table.getDomainObjectName() + "ReqDto");
+				this.reqDtoTargetPackage + "." + fileName + "ReqDto");
 		TopLevelClass topLevelClass = new TopLevelClass(type);
 		topLevelClass.setVisibility(JavaVisibility.PUBLIC);
 
@@ -259,8 +267,12 @@ public class DtoGeneratorPlugin extends PluginAdapter {
 	private CompilationUnit generateResDto(IntrospectedTable introspectedTable) {
 		// 设置Dto类信息
 		FullyQualifiedTable table = introspectedTable.getFullyQualifiedTable();
+        String fileName = table.getDomainObjectName();
+        if (fileName.startsWith("Tb")) {
+            fileName = fileName.substring(2);
+        }
 		FullyQualifiedJavaType type = new FullyQualifiedJavaType(
-				this.resDtoTargetPackage + "." + table.getDomainObjectName() + "ResDto");
+				this.resDtoTargetPackage + "." + fileName + "ResDto");
 		TopLevelClass topLevelClass = new TopLevelClass(type);
 		topLevelClass.setVisibility(JavaVisibility.PUBLIC);
 
