@@ -1,7 +1,7 @@
 /**
  * CorsSetHandler.java
  * Created at 2021-09-10
- * Created by xieyingbin
+ * Created by xyb
  * Copyright (C) 2020 nikki, All rights reserved.
  **/
 package com.nikki.common.security;
@@ -23,7 +23,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * 设置跨域信息
  * 
- * @author xieyingbin 2021-09-10
+ * @author xyb 2021-09-10
  */
 @Component
 @Slf4j

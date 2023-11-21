@@ -1,7 +1,7 @@
 /**
  * DimMonitorPointResDto.java
  * Created at 2022-11-16
- * Created by wangyanjun
+ * Created by Jesse Wang
  * Copyright (C) 2020 nikki, All rights reserved.
  **/
 package com.nikki.dto.sys.res;
@@ -14,7 +14,7 @@ import lombok.Data;
 
 /**
  * 监控点维度表
- * @author wangyanjun  2022-11-16
+ * @author Jesse Wang  2022-11-16
  */
 @Data
 @ApiModel(value = "监控点维度表响应Dto")

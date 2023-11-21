@@ -1,7 +1,7 @@
 /**
  * ResponseData.java
  * Created at 2020-03-20
- * Created by xieyingbin
+ * Created by xyb
  * Copyright (C) 2020 nikki, All rights reserved.
  */
 package com.nikki.common.dto;
@@ -17,7 +17,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * 请求响应数据对象
  * 
- * @author xieyingbin
+ * @author xyb
  *
  * @param <T> 数据对象
  */

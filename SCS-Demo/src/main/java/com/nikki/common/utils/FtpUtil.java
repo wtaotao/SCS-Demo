@@ -1,7 +1,7 @@
 /**
  * FtpUtil.java
  * Created at 2021-08-26
- * Created by xieyingbin
+ * Created by xyb
  * Copyright (C) 2020 nikki, All rights reserved.
  */
 package com.nikki.common.utils;
@@ -25,7 +25,7 @@ import org.slf4j.LoggerFactory;
 /**
  * FTP工具类
  * 
- * @author xieyingbin
+ * @author xyb
  *
  */
 public class FtpUtil {

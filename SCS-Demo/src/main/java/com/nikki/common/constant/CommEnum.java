@@ -3,7 +3,7 @@ package com.nikki.common.constant;
 /**
  * 全局枚举类型
  * 
- * @author xieyb
+ * @author xyb
  *
  */
 public enum CommEnum {

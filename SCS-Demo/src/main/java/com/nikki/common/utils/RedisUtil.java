@@ -1,7 +1,7 @@
 /**
  * RedisUtil.java
  * Created at 2021-08-26
- * Created by xieyingbin
+ * Created by xyb
  * Copyright (C) 2020 nikki, All rights reserved.
  */
 package com.nikki.common.utils;
@@ -19,7 +19,7 @@ import org.springframework.util.CollectionUtils;
 /**
  * Redis工具类
  * 
- * @author xieyingbin
+ * @author xyb
  */
 public class RedisUtil {
 	private final static Logger logger = LoggerFactory.getLogger(RedisUtil.class);

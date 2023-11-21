@@ -11,7 +11,7 @@ import com.nikki.dto.sys.res.DimMonitorPointResDto;
 
 /**
  * 监控点维度表Service接口类
- * @author wangyanjun  2022-11-16 14:27:26
+ * @author Jesse Wang  2022-11-16 14:27:26
  */
 public interface IDimMonitorPointService {
     /**

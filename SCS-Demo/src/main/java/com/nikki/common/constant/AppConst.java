@@ -1,7 +1,7 @@
 /**
  * AppConst.java
  * Created at 2021-09-10
- * Created by xieyingbin
+ * Created by xyb
  * Copyright (C) 2020 nikki, All rights reserved.
  */
 package com.nikki.common.constant;
@@ -9,7 +9,7 @@ package com.nikki.common.constant;
 /**
  * 应用常量定义
  * 
- * @author xieyingbin
+ * @author xyb
  *
  */
 public class AppConst {

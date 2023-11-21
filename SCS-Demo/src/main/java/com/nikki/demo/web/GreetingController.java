@@ -14,8 +14,8 @@ import com.nikki.demo.service.GreetingService;
  * <pre>
  *
  * </pre>
- * @author wangyanjun
- * @version $Id: GreetingController.java, v 0.1 2017年8月2日 上午9:26:11 wangyanjun Exp $
+ * @author Jesse Wang
+ * @version $Id: GreetingController.java, v 0.1 2017年8月2日 上午9:26:11 Jesse Wang Exp $
  */
 @Controller
 public class GreetingController {

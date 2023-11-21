@@ -1,7 +1,7 @@
 /**
  * DimMonitorPointEntityExample.java
  * Created at 2022-11-16
- * Created by wangyanjun
+ * Created by Jesse Wang
  * Copyright (C) 2020 nikki, All rights reserved.
  **/
 package com.nikki.entity;

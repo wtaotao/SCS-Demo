@@ -14,8 +14,8 @@ import com.nikki.entity.UserEntity;
  *
  * </pre>
  *
- * @author wangyanjun
- * @version $Id: UserMapper.java, v 0.1 2023年9月15日 下午3:14:03 wangyanjun Exp $
+ * @author Jesse Wang
+ * @version $Id: UserMapper.java, v 0.1 2023年9月15日 下午3:14:03 Jesse Wang Exp $
  */
 @Mapper
 @Repository

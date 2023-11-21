@@ -1,7 +1,7 @@
 /**
  * CustomUserDetails.java
  * Created at 2020-03-20
- * Created by xieyingbin
+ * Created by xyb
  * Copyright (C) 2020 nikki, All rights reserved.
  */
 package com.nikki.common.security;
@@ -17,7 +17,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 /**
  * 登录用户认证详细信息，包括用户权限集合。
  * 
- * @author xieyingbin
+ * @author xyb
  *
  */
 public class CustomUserDetails implements UserDetails {

@@ -1,7 +1,7 @@
 /**
  * DimMonitorPointHelper.java
  * Created at 2022-11-16
- * Created by wangyanjun
+ * Created by Jesse Wang
  * Copyright (C) 2020 nikki, All rights reserved.
  **/
 package com.nikki.service.sys.helper;
@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * 监控点维度表Service helper类
- * @author wangyanjun  2022-11-16 14:27:26
+ * @author Jesse Wang  2022-11-16 14:27:26
  */
 @Component
 public class DimMonitorPointHelper {

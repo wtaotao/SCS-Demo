@@ -26,8 +26,8 @@ import lombok.extern.slf4j.Slf4j;
  *
  * </pre>
  *
- * @author wangyanjun
- * @version $Id: DimMonitorPointController.java, v 0.1 2023年9月14日 下午3:31:35 wangyanjun Exp $
+ * @author Jesse Wang
+ * @version $Id: DimMonitorPointController.java, v 0.1 2023年9月14日 下午3:31:35 Jesse Wang Exp $
  */
 @RestController
 @Slf4j

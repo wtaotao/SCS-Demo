@@ -1,7 +1,7 @@
 /**
  * TaskData.java
  * Created at 2020-12-18
- * Created by xieyb
+ * Created by xyb
  * Copyright (C) 2020 nikki, All rights reserved.
  **/
 package com.nikki.common.dto;
@@ -16,7 +16,7 @@ import lombok.Data;
  * 
  * 任务数据
  * 
- * @author xieyb 2020-03-28
+ * @author xyb 2020-03-28
  */
 @Data
 @ApiModel(value = "任务数据")

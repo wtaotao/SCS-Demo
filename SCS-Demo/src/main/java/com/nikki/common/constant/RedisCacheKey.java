@@ -3,7 +3,7 @@ package com.nikki.common.constant;
 /**
  * Redis缓存Key管理
  * 
- * @author xieyb
+ * @author xyb
  *
  */
 public class RedisCacheKey {

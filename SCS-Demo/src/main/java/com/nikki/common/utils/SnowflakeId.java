@@ -1,7 +1,7 @@
 /**
  * SnowflakeId.java
  * Created at 2021-09-01
- * Created by xieyingbin
+ * Created by xyb
  * Copyright (C) 2020 nikki, All rights reserved.
  */
 package com.nikki.common.utils;
@@ -15,7 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * 雪花算法ID工具类
  * 
- * @author xieyingbin
+ * @author xyb
  *
  */
 @Slf4j

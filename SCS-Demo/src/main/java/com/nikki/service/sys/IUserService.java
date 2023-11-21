@@ -12,8 +12,8 @@ import com.nikki.entity.UserEntity;
  *
  * </pre>
  *
- * @author wangyanjun
- * @version $Id: IUserService.java, v 0.1 2023年9月15日 下午3:30:10 wangyanjun Exp $
+ * @author Jesse Wang
+ * @version $Id: IUserService.java, v 0.1 2023年9月15日 下午3:30:10 Jesse Wang Exp $
  */
 public interface IUserService {
     /**

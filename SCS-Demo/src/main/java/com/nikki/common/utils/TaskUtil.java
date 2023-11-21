@@ -1,7 +1,7 @@
 /**
  * TaskUtil.java
  * Created at 2021-08-26
- * Created by xieyingbin
+ * Created by xyb
  * Copyright (C) 2020 nikki, All rights reserved.
  */
 package com.nikki.common.utils;
@@ -16,7 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * 任务（异步）工具类
  * 
- * @author xieyingbin
+ * @author xyb
  *
  */
 @Slf4j

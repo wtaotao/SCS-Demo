@@ -9,7 +9,7 @@ package com.nikki.common.constant;
 /**
  * 数据字典公共编码
  *
- * @author xieyingbin
+ * @author xyb
  */
 public enum DictType {
 

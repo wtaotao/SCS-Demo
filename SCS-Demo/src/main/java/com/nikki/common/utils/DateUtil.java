@@ -1,7 +1,7 @@
 /**
  * DateUtil.java
  * Created at 2021-08-26
- * Created by xieyingbin
+ * Created by xyb
  * Copyright (C) 2020 nikki, All rights reserved.
  */
 package com.nikki.common.utils;
@@ -19,7 +19,7 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * 时间工具类
  * 
- * @author xieyb
+ * @author xyb
  *
  */
 public class DateUtil {

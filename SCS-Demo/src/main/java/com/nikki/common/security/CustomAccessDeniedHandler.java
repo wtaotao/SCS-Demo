@@ -1,7 +1,7 @@
 /**
  * CustomAccessDeniedHandler.java
  * Created at 2020-03-20
- * Created by xieyingbin
+ * Created by xyb
  * Copyright (C) 2020 nikki, All rights reserved.
  */
 package com.nikki.common.security;
@@ -29,7 +29,7 @@ import com.nikki.common.dto.ResponseData;
 /**
  * 权限用户未授权资源处理
  * 
- * @author xieyingbin
+ * @author xyb
  *
  */
 @Component

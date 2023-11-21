@@ -13,8 +13,8 @@ import lombok.Data;
  *
  * </pre>
  *
- * @author wangyanjun
- * @version $Id: UserResDto.java, v 0.1 2023年9月15日 下午4:19:06 wangyanjun Exp $
+ * @author Jesse Wang
+ * @version $Id: UserResDto.java, v 0.1 2023年9月15日 下午4:19:06 Jesse Wang Exp $
  */
 @Data
 public class UserResDto {

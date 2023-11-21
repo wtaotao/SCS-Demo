@@ -1,7 +1,7 @@
 /**
  * AppConfig.java
  * Created at 2021-09-10
- * Created by xieyingbin
+ * Created by xyb
  * Copyright (C) 2020 nikki, All rights reserved.
  */
 package com.nikki.common.config;
@@ -9,7 +9,7 @@ package com.nikki.common.config;
 /**
  * 应用配置
  * 
- * @author xieyingbin
+ * @author xyb
  *
  */
 public class AppConfig {

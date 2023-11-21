@@ -17,7 +17,7 @@ import org.hibernate.validator.constraints.Length;
 
 /**
  * 监控点维度表
- * @author wangyanjun 2022-11-16
+ * @author Jesse Wang 2022-11-16
  */
 @Data
 @ApiModel(value = "监控点维度表请求Dto")

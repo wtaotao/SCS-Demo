@@ -22,7 +22,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * 监控点维度表Service实现类
- * @author wangyanjun  2022-11-16 14:27:26
+ * @author Jesse Wang  2022-11-16 14:27:26
  */
 @Service
 @Slf4j

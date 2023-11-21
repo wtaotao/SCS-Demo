@@ -16,8 +16,8 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
  * sce的处理例子
  * </pre>
  *
- * @author wangyanjun
- * @version $Id: ThreadPoolExecutorConfig.java, v 0.1 2023年10月8日 下午1:03:06 wangyanjun Exp $
+ * @author Jesse Wang
+ * @version $Id: ThreadPoolExecutorConfig.java, v 0.1 2023年10月8日 下午1:03:06 Jesse Wang Exp $
  */
 @Configuration
 @EnableAsync

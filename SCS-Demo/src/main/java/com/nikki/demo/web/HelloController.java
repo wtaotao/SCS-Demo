@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
  * <pre>
  *
  * </pre>
- * @author wangyanjun
- * @version $Id: HelloController.java, v 0.1 2017年7月31日 上午11:13:54 wangyanjun Exp $
+ * @author Jesse Wang
+ * @version $Id: HelloController.java, v 0.1 2017年7月31日 上午11:13:54 Jesse Wang Exp $
  */
 @RestController
 public class HelloController {

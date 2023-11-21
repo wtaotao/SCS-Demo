@@ -1,7 +1,7 @@
 /**
  * CustomAuthenticationEntryPoint.java
  * Created at 2020-03-20
- * Created by xieyingbin
+ * Created by xyb
  * Copyright (C) 2020 nikki, All rights reserved.
  */
 package com.nikki.common.security;
@@ -29,7 +29,7 @@ import com.nikki.common.dto.ResponseData;
 /**
  * 匿名用户访问认证入口点
  * 
- * @author xieyingbin
+ * @author xyb
  *
  */
 @Component

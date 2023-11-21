@@ -1,7 +1,7 @@
 /**
  * BusiException.java
  * Created at 2021-08-26
- * Created by xieyingbin
+ * Created by xyb
  * Copyright (C) 2020 nikki, All rights reserved.
  */
 package com.nikki.common.exception;
@@ -9,7 +9,7 @@ package com.nikki.common.exception;
 /**
  * 业务异常类
  * 
- * @author xieyingbin
+ * @author xyb
  *
  */
 public class BusiException extends RuntimeException {

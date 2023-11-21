@@ -20,8 +20,8 @@ import lombok.extern.slf4j.Slf4j;
  *
  * </pre>
  *
- * @author wangyanjun
- * @version $Id: UserService.java, v 0.1 2023年9月15日 下午3:32:15 wangyanjun Exp $
+ * @author Jesse Wang
+ * @version $Id: UserService.java, v 0.1 2023年9月15日 下午3:32:15 Jesse Wang Exp $
  */
 @Service
 @Slf4j

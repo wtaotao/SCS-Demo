@@ -4,7 +4,7 @@ import javax.validation.Valid;
 import java.util.*;
 
 /**
- * @author huangyiling @date 2020/5/28 11:20
+ * @author hyl @date 2020/5/28 11:20
  */
 public class ValidList<E> implements List<E> {
 

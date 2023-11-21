@@ -1,7 +1,7 @@
 /**
  * ValidatorUtil.java
  * Created at 2021-08-26
- * Created by xieyingbin
+ * Created by xyb
  * Copyright (C) 2020 nikki, All rights reserved.
  */
 package com.nikki.common.utils;
@@ -17,7 +17,7 @@ import com.nikki.common.exception.BusiException;
 /**
  * 对象校验工具类
  * 
- * @author xieyingbin
+ * @author xyb
  *
  */
 public class ValidatorUtil {

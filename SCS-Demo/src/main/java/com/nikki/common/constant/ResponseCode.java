@@ -9,7 +9,7 @@ package com.nikki.common.constant;
 /**
  * 请求响应码定义
  * 
- * @author xieyingbin
+ * @author xyb
  *
  */
 public enum ResponseCode {

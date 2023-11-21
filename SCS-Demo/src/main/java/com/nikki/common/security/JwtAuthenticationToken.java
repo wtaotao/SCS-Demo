@@ -1,7 +1,7 @@
 /**
  * JwtAuthToken.java
  * Created at 2020-03-20
- * Created by xieyingbin
+ * Created by xyb
  * Copyright (C) 2020 nikki, All rights reserved.
  */
 package com.nikki.common.security;
@@ -14,7 +14,7 @@ import org.springframework.security.core.GrantedAuthority;
 /**
  * JWT认证用Token类
  * 
- * @author xieyb
+ * @author xyb
  *
  */
 public class JwtAuthenticationToken extends AbstractAuthenticationToken {

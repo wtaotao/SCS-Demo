@@ -3,7 +3,7 @@ package com.nikki.common.constant;
 /**
  * 常量类（常量、格式定义、正则表达式等）
  *
- * @author xieyb
+ * @author xyb
  */
 public class CommConst {
     /**

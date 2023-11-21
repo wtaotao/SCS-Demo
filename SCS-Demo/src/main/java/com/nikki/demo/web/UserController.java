@@ -23,8 +23,8 @@ import io.swagger.annotations.ApiParam;
  *
  * </pre>
  *
- * @author wangyanjun
- * @version $Id: UserController.java, v 0.1 2023年9月15日 下午3:41:26 wangyanjun Exp $
+ * @author Jesse Wang
+ * @version $Id: UserController.java, v 0.1 2023年9月15日 下午3:41:26 Jesse Wang Exp $
  */
 @RestController
 public class UserController {

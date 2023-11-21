@@ -1,7 +1,7 @@
 /**
  * SysConfig.java
  * Created at 2021-12-05
- * Created by xieyingbin
+ * Created by xyb
  * Copyright (C) 2020 nikki, All rights reserved.
  */
 package com.nikki.common.constant;
@@ -9,7 +9,7 @@ package com.nikki.common.constant;
 /**
  * 系统配置
  *
- * @author xieyingbin
+ * @author xyb
  */
 public class SysConfig {
 

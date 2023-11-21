@@ -12,7 +12,7 @@ import java.util.Date;
 
 /**
  * 监控点维度表
- * @author wangyanjun  2022-11-16
+ * @author Jesse Wang  2022-11-16
  */
 public class DimMonitorPointEntity implements Serializable {
     /**

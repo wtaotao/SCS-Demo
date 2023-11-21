@@ -6,7 +6,7 @@ import java.util.*;
 /**
  * Dto列表校验类
  * 
- * @author huangyiling 
+ * @author hyl 
  */
 public class ValidList<E> implements List<E> {
 
