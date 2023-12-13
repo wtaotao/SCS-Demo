@@ -34,7 +34,7 @@ import mybatis.utils.ConstUtils;
  * 1. 生成新Dao类并继承统一基类，Dao类名规则可自定义。 <br>
  * 2. 生成扩展MapperXml文件，Xml文件名规则可自定义。 <br>
  * 
- * @author xyb
+ * @author
  *
  */
 @Slf4j
